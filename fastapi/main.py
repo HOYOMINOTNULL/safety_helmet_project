@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 app = FastAPI()
-import  torch
 
 @app.get("/")
 async def root():
