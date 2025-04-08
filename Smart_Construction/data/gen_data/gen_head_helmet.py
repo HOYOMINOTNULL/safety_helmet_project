@@ -16,7 +16,7 @@ from xml.dom.minidom import parse
 import numpy as np
 from tqdm import tqdm
 
-FILE_ROOT = Path(r"E:\AI_Project\AI_Learning\Dataset")
+FILE_ROOT = Path(r"E:\safety_helmet\safety_helmet_project\Smart_Construction\data\VOC2028")
 
 # 原始数据集
 IMAGE_SET_ROOT = FILE_ROOT.joinpath(r"VOC2028\ImageSets\Main")  # 图片区分文件的路径
@@ -25,8 +25,8 @@ ANNOTATIONS_PATH = FILE_ROOT.joinpath(r"VOC2028\Annotations")  # 数据集标签
 LABELS_ROOT = FILE_ROOT.joinpath(r"VOC2028\Labels")  # 进行归一化之后的标签位置
 
 # YOLO 需要的数据集形式的新数据集
-DEST_IMAGES_PATH = Path(r"Safety_Helmet_Train_dataset\score\images")  # 区分训练集、测试集、验证集的图片目标路径
-DEST_LABELS_PATH = Path(r"Safety_Helmet_Train_dataset\score\labels")  # 区分训练集、测试集、验证集的标签文件目标路径
+DEST_IMAGES_PATH = Path(r"Smart_Construction/data/dataset/images")  # 区分训练集、测试集、验证集的图片目标路径
+DEST_LABELS_PATH = Path(r"Smart_Construction/data/dataset/labels")  # 区分训练集、测试集、验证集的标签文件目标路径
 
 
 def cord_converter(size, box):
