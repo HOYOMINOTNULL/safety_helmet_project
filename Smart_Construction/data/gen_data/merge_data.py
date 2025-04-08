@@ -6,11 +6,12 @@
 # @Software: PyCharm
 # @Brief   : 将自己的数据集使用 yolov5 检测出人体，合入自己数据集生成的安全帽标签
 # 使用命令 python detect.py --save-txt --source 图片路径， 可以在 output 中看到每个图片的 txt 标签文件
-
 import os
 
-YOLOV5_LABEL_ROOT = f"E:\AI_Project\Smart_Construction_Project\inference\output\\"  # yolov5 导出的推理图片的 txt
-DATASET_LABEL_ROOT = f"E:\AI_Project\AI_Learning\Dataset\VOC2028\Labels\\"  # 数据集的路径
+YOLOV5_LABEL_ROOT = r"E:\safety_helmet\safety_helmet_project\Smart_Construction\data\VOC2028\person\val_labels\\"
+# yolov5 导出的推理图片的 txt
+DATASET_LABEL_ROOT = r"E:\safety_helmet\safety_helmet_project\Smart_Construction\data\VOC2028\labels\val\\"
+# 数据集的路径
 
 if __name__ == '__main__':
     yolo_file = os.listdir(YOLOV5_LABEL_ROOT)
