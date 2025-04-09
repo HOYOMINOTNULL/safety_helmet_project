@@ -1,7 +1,7 @@
 # This file contains experimental modules
 
-from models.common import *
-from utils import google_utils
+from Smart_Construction.models.common import *
+from Smart_Construction.utils import google_utils
 
 
 class CrossConv(nn.Module):
@@ -130,7 +130,7 @@ def attempt_load(weights, map_location=None):
     model = Ensemble()
     for w in weights if isinstance(weights, list) else [weights]:
         google_utils.attempt_download(w)
-        model.append(torch.load(w, map_location=map_location)['model'].float().fuse().eval())  # load FP32 model
+        model.append(torch.load(w, map_location=map_location,weights_only=False)['model'].float().fuse().eval())  # load FP32 model
 
     if len(model) == 1:
         return model[-1]  # return model

@@ -3,8 +3,8 @@ import cv2 as cv
 import threading
 import  numpy as np
 import  traceback
-from config import MODEL_PATH,cameras
-model=YOLO(MODEL_PATH)
+from config import YOLO_MODEL_PATH,cameras
+model=YOLO(YOLO_MODEL_PATH)
 
 
 

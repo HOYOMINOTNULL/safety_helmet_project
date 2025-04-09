@@ -9,6 +9,7 @@ import random
 from models.experimental import attempt_load
 from utils.datasets import LoadImages
 from utils.utils import non_max_suppression, scale_coords
+from config import  FACE_MODEL_PATH
 
 class HelmetFaceDetector:
     def __init__(self, weights, db_path):
@@ -205,8 +206,8 @@ if __name__ == "__main__":
     os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:256"
 
     detector = HelmetFaceDetector(
-        weights="weights/helmet_head_person_s.pt",
-        db_path="faces.db"
+        weights=FACE_MODEL_PATH,
+        db_path="./faces.db"
     )
     detector.detect(
         "D:/PyCharm/Deep_learning/safetyhelmet/VOC2028/JPEGImages"
