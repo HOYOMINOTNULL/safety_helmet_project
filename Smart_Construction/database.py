@@ -49,7 +49,7 @@ class HelmetFaceDetector:
         # 创建表（如果不存在）
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS face_data (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER PRIMARY KEY AUTO_INCREMENT,
                 employee_id TEXT,
                 position TEXT,
                 violation_time DATETIME DEFAULT CURRENT_TIMESTAMP,

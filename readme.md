@@ -1,4 +1,8 @@
-                                         YOLO V8 安全帽识别模型
+                            config.py
+全局变量保存位置
+
+
+                                 YOLO V8 安全帽识别模型
 模型位置:   模型及相关参数文件保存在"Smart_Construction/models/ultimate_model"下面
 
 
@@ -6,6 +10,8 @@
 
 推理:   推理文件在位于"Smart_Construction/detect.ipynb"上，第一个cell是多线程，第二个cell是单线程处理
  
+
+
                                            人脸识别模块
 
 database.py：将所有图片中未佩戴安全帽且可被提取人脸特征的人，将信息全部录入数据库face.db中（使用github训练好且显卡带得动的l型权重模型，识别效果较差，后续可用训练好的模型）
@@ -17,7 +23,7 @@ if __name__ == "__main__":
 
     detector = HelmetFaceDetector(
         weights="weights/helmet_head_person_s.pt",
-        db_path="faces.db"
+        db_path="Smart_Construction/faces.db"
     )
     detector.detect(
         "D:/PyCharm/Deep_learning/safetyhelmet/VOC2028/JPEGImages"
